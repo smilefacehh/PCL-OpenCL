@@ -1,11 +1,11 @@
-__kernel void kernel_depth2pointcloud(__global unsigned char* rgb, 
-                                      __global unsigned char* depth, 
+__kernel void kernel_depth2pointcloud(__global uchar* rgb, 
+                                      __global ushort* depth, 
                                       __global const float* param, 
                                       __global float* grid_pointcloud)
 {
     int x = get_global_id(0);
     int y = get_global_id(1);
-    int w = param[0], h = param[1], fx = param[2], fy = param[3], cx = param[4], cy = param[5], factor = param[6];
+    float w = param[0], h = param[1], fx = param[2], fy = param[3], cx = param[4], cy = param[5], factor = param[6];
 
     if(x < w && y < h)
     {
