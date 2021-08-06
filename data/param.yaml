@@ -1,0 +1,11 @@
+%YAML:1.0
+
+camera:
+  intrinsics:
+    fx: 520.9
+    fy: 521.0
+    cx: 325.1
+    cy: 249.7
+
+depth:
+  factor: 5000
